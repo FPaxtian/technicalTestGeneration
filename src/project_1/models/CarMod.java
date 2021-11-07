@@ -140,12 +140,21 @@ public class CarMod implements CarInt{
     @Override
     public void brakingCar() {
         this.currentspeed = 0;
+        this.nochange = 0;
+        System.out.println("braking the car");
     }
 
     @Override
     public void gearUp() {
-        if(this.nochange <= this.change)
+        if(this.nochange < this.change){
             this.nochange = this.nochange +1;
+            System.out.println(this.nochange+" velocidad");
+            for (int i = 0; i < 10; i++) {
+                this.speedingUpTheCar();
+                System.out.println(this.currentspeed+ "km/h");
+            }
+        }
+            
         else
             System.out.println("limit "+this.change);
     }

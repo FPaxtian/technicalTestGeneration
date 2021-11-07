@@ -23,17 +23,26 @@ public class Project_1Test {
         direction.setCity("Minatitlan");
         CarMod car = new CarMod(new ProprietaryMod("Jack Antonio Jr Paxtian", "12345678","IPF1999", direction));
         
-        for (int i = 0; i < 10; i++) {
-            car.speedingUpTheCar();
-        }
+        //for (int i = 0; i < 10; i++) {
+          //  car.speedingUpTheCar();
+        //}        
         
-        System.out.println(car.getCurrentspeed());
         
-        car.brakingCar();
+        //System.out.println(car.getCurrentspeed());
+        
+        //car.brakingCar();
         
         System.out.println(car.getCurrentspeed());
         
         System.out.println(car.getProprietary().getName());
+        
+        for (int i = 0; i < 10; i++) {
+            car.gearUp();        
+        }
+        
+        car.reverse();
+        car.brakingCar();
+        car.reverse();
     }
     
 }

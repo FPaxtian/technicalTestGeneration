@@ -20,9 +20,12 @@ public class Project_2Test {
         invoice.setDesc("Desct Article");
         invoice.setCountPay(10);
         invoice.setPrice(23.67);
+                
+        System.out.println(invoice.getTotalInvoice());        
         
+        invoice.setPrice(-23.67);
         
-        System.out.println(invoice.getTotalInvoice());
+        System.out.println(invoice.getTotalInvoice());        
         
     }
 }

@@ -31,20 +31,6 @@ public class Project_3Test {
         System.out.println(employees.getListEmployee().get(1).getName()+" Gano al año con su aumento del 10% " +salaryComplete_2);
         
         System.out.println("No de empelado: "+employees.getListEmployee().size());
-        
-        /*Employee emplo_jefe = new Employee();
-        Employee emplo_1 = new Employee();
-        Employee emplo_2 = new Employee();
-        
-        /*emplo_1.setName("Francisco");        
-        emplo_1.setLastname("Paxtian");
-        emplo_1.setSalary(1231);
-        emplo_2.setName("Jr");
-        emplo_2.setLastname("Izquierdo");
-        emplo_2.setSalary(1);
-        
-        System.out.println(emplo_1.getName()+" Gana: "+emplo_1.getSalary()+"$ al mes");
-        System.out.println(emplo_2.getName()+" Gana: "+emplo_2.getSalary()+"$ al mes");
-        System.out.println(new Employee().getNoEmployees());*/
+                
     }
 }
