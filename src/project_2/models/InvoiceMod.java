@@ -61,11 +61,7 @@ public class InvoiceMod {
             amount = 0;
         }
         return amount;
-    }
-
-    public void getCountPay(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }    
     
     
 }
