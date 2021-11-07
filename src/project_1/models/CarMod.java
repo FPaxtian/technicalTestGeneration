@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package project_1.models;
 
-import interfaces.CarInt;
+import project_1.models.interfaces.CarInt;
 
 /**
  *
@@ -25,10 +25,15 @@ public class CarMod implements CarInt{
     private float maximumspeed;
     private float currentspeed = 0;
     private int nodoors;
-    private int slidingroof;
-    private float fuel;
-    private int gearbox;
-    private int nochange = 0; 
+    private int slidingroof; // techo
+    private float fuel; // gasolina
+    private int gearbox; // cambios
+    private int change = 5;
+    private int nochange = 0;  // velocidad en la que esta
+ 
+    public CarMod(ProprietaryMod proprietary) {
+        this.proprietary = proprietary;
+    }        
     
 
     public String getModel() {
@@ -139,12 +144,26 @@ public class CarMod implements CarInt{
 
     @Override
     public void gearUp() {
-        this.nochange = this.nochange +1;
+        if(this.nochange <= this.change)
+            this.nochange = this.nochange +1;
+        else
+            System.out.println("limit "+this.change);
     }
 
     @Override
     public void gearDown() {
-        this.nochange = this.nochange-1;
+        if(this.nochange > 0)
+            this.nochange = this.nochange-1;
+        else
+            System.out.println("reverse?");
+    }
+
+    @Override
+    public void reverse() {
+        if(this.nochange <= 0)
+            System.out.println("the car is reversing");
+        else
+            System.out.println("need to slow down");
     }
     
 }

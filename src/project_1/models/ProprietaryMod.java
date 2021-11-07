@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package project_1.models;
 
 /**
  *
@@ -16,17 +16,16 @@ public class ProprietaryMod {
     private String name;
     private String cpf; // Registro de persona fisica
     private String rg; // Identity card
-    private String street;
-    private String neighborhood;    
-    private Integer cp; // Code postal
+    private DirectionMod direction;
     private String complement;
     
     // Defining the constructor method ( name , cpf , rg )
 
-    public ProprietaryMod(String name, String cpf, String rg) {
+    public ProprietaryMod(String name, String cpf, String rg, DirectionMod direction) {
         this.name = name;
         this.cpf = cpf;
         this.rg = rg;
+        this.direction = direction;
     }
 
     // Encapsulating the class with the methods getters and setters
@@ -53,31 +52,7 @@ public class ProprietaryMod {
 
     public void setRg(String rg) {
         this.rg = rg;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public String getNeighborhood() {
-        return neighborhood;
-    }
-
-    public void setNeighborhood(String neighborhood) {
-        this.neighborhood = neighborhood;
-    }    
-
-    public Integer getCp() {
-        return cp;
-    }
-
-    public void setCp(Integer cp) {
-        this.cp = cp;
-    }
+    }            
 
     public String getComplement() {
         return complement;
@@ -86,6 +61,15 @@ public class ProprietaryMod {
     public void setComplement(String complement) {
         this.complement = complement;
     }
+
+    public DirectionMod getDirection() {
+        return direction;
+    }
+
+    public void setDirection(DirectionMod direction) {
+        this.direction = direction;
+    }
+        
     
     
 }

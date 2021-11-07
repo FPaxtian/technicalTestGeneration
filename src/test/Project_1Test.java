@@ -5,16 +5,23 @@
  */
 package test;
 
-import models.CarMod;
+import project_1.models.CarMod;
+import project_1.models.DirectionMod;
+import project_1.models.ProprietaryMod;
 
 /**
  *
  * @author Paxtian
  */
-public class Main {
+public class Project_1Test {
     
     public static void main(String[] args) {
-        CarMod car = new CarMod();
+        
+        DirectionMod direction = new DirectionMod(9670);        
+        direction.setStreet("Lerdo");
+        direction.setNeighborhood("Centro");
+        direction.setCity("Minatitlan");
+        CarMod car = new CarMod(new ProprietaryMod("Jack Antonio Jr Paxtian", "12345678","IPF1999", direction));
         
         for (int i = 0; i < 10; i++) {
             car.speedingUpTheCar();
@@ -26,6 +33,7 @@ public class Main {
         
         System.out.println(car.getCurrentspeed());
         
+        System.out.println(car.getProprietary().getName());
     }
     
 }

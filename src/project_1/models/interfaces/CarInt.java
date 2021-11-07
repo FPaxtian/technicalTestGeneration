@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfaces;
+package project_1.models.interfaces;
 
 /**
  *
@@ -13,5 +13,8 @@ public interface CarInt {
     
     public void speedingUpTheCar();
     public void brakingCar();
+    public void gearUp();
+    public void gearDown();
+    public void reverse();
     
 }
